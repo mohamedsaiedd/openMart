@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Demo</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "bootstrap.min" %>
+    
+   <script src="https://unpkg.com/jquery@3.7.0/dist/jquery.js" ></script>
+   <script src="https://unpkg.com/bootstrap@4.5.0/dist/js/bootstrap.min.js" ></script>
+  </head>
+
+  <body>
+    <%= render partial:"shared/navbar"%>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>
