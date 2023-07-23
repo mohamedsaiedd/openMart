@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   root  "home#index"
   get "/store", to: "store#index"  , as: :store
   get "/product", to: "product#index"
+  get "/sign_up", to: "registration#new"
+  post "sign_up" ,  to: "registration#create"
 end
