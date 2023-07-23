@@ -27,10 +27,12 @@
           <a class="nav-link disabled">Disabled</a>
         </li>
       </ul>
-      <form class="d-flex" role="search">
+      <%# <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+      </form> %>
+      <%= link_to "Sign Up" , sign_up_path , class:"btn btn-primary ml-3"%>&nbsp;
+      <%= link_to "Login" , login_path , class:"btn btn-outline-primary ml-3"%>&nbsp;
     </div>
   </div>
 </nav>

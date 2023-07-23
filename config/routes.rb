@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   get "/store", to: "store#index"  , as: :store
   get "/product", to: "product#index"
   get "/sign_up", to: "registration#new"
+  get "/login", to: "login#index"
   post "sign_up" ,  to: "registration#create"
 end
