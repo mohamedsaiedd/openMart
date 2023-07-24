@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
     def index
-        # flash.now[:alert] = "Invailed Email Or Password   "
-        # flash.now[:notice] = "Logged Successfully"
+       if session[:user_id]
+            @user = User.find(session[:user_id])
+       end
     end
 end

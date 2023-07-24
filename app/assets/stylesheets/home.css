@@ -2,3 +2,8 @@ body , *{
     background-color: aquamarine !important;
     width: 100px !important;
 }
+
+
+.user-ava {
+    font-size: 30px ;
+}

@@ -31,8 +31,23 @@
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form> %>
-      <%= link_to "Sign Up" , sign_up_path , class:"btn btn-primary ml-3"%>&nbsp;
-      <%= link_to "Login" , login_path , class:"btn btn-outline-primary ml-3"%>&nbsp;
+      <% if @user%>
+        <div class="nav-link d-flex nav-item">
+          <%= @user.name %>
+        </div>
+        <div class="dropdown  pr-5">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <button class="dropdown-item" type="button">action</button>
+            <%= button_to "logout" , logout_path , method: :delete , class: "dropdown-item"%>
+          </div>
+        </div>
+      <%else%>
+        <%= link_to "Sign Up" , sign_up_path , class:"btn btn-primary ml-3"%>&nbsp;
+        <%= link_to "Login" , log_in_path , class:"btn btn-outline-primary ml-3"%>&nbsp;
+      <% end%>
     </div>
   </div>
 </nav>
