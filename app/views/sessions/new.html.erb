@@ -10,6 +10,9 @@
         <label for="exampleInputEmail1">Password</label>
         <%= form.password_field :password , class:"form-control" , placeholder: "test@123"%>
     </div>
-   
+    <div class="form-group mb-3">
+
+    <%= link_to 'Forget Password?', password_reset_path%>
+   </div>
     <%= form.submit "Login" , class:"btn btn-primary" %>    
 <% end%>

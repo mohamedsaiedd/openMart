@@ -33,13 +33,15 @@
       </form> %>
       <% if Current.user%>
         <div class="nav-link d-flex nav-item">
-          <%= Current.user.name %>
+          <%= Current.user.name %>&nbsp;&nbsp;
         </div>
         <div class="dropdown  pr-5">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
+          <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Settings
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <span class="dropdown-item" >Hello <%= Current.user.name %>
+            </span> 
             <button class="dropdown-item" type="button">action</button>
             <%= button_to "logout" , logout_path , method: :delete , class: "dropdown-item"%>
             <%= link_to "edit password", edit_password_path , class: "dropdown-item"%>
